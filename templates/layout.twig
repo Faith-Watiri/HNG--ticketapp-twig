@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title }} - TicketFlow</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>TicketFlow</h1>
+    <nav>
+      <a href="?page=landing">Home</a>
+      <a href="?page=dashboard">Dashboard</a>
+      <a href="?page=tickets">Tickets</a>
+      <a href="?page=login">Login</a>
+      <a href="?page=signup">Signup</a>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <p>&copy; {{ "now"|date("Y") }} TicketFlow. All rights reserved.</p>
+  </footer>
+</body>
+</html>

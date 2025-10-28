@@ -1,0 +1,30 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+<h2>Tickets</h2>
+
+<table border="1" cellpadding="10" cellspacing="0">
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Status</th>
+  </tr>
+  {% for ticket in tickets %}
+    <tr>
+      <td>{{ ticket.id }}</td>
+      <td>{{ ticket.title }}</td>
+      <td>
+        {% if ticket.status == 'open' %}
+          <span style="color:green;">Open</span>
+        {% elseif ticket.status == 'in_progress' %}
+          <span style="color:orange;">In Progress</span>
+        {% else %}
+          <span style="color:gray;">Closed</span>
+        {% endif %}
+      </td>
+    </tr>
+  {% else %}
+    <tr><td colspan="3">No tickets found</td></tr>
+  {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+<h2>Welcome, {{ username }}</h2>
+<p>Here’s a quick overview of your ticket statistics:</p>
+
+<div class="stats">
+  <div class="card">
+    <h3>Total Tickets</h3>
+    <p>{{ tickets|length }}</p>
+  </div>
+  <div class="card">
+    <h3>Open Tickets</h3>
+    <p>{{ tickets|filter(t => t.status == 'open')|length }}</p>
+  </div>
+  <div class="card">
+    <h3>Resolved Tickets</h3>
+    <p>{{ tickets|filter(t => t.status == 'closed')|length }}</p>
+  </div>
+</div>
+{% endblock %}
