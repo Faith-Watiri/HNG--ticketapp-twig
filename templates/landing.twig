@@ -1,10 +1,19 @@
-{% extends "layout.twig" %}
-
-{% block content %}
-<section class="hero">
-  <h2>Manage support tickets seamlessly</h2>
-  <p>Track, resolve, and organize tasks efficiently.</p>
-  <a href="?page=login" class="btn">Login</a>
-  <a href="?page=signup" class="btn">Get Started</a>
-</section>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TicketFlow</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <section class="hero">
+    <h1>TicketFlow</h1>
+    <p>Manage support tickets seamlessly — track, resolve, and organize tasks efficiently.</p>
+    <div>
+      <button onclick="window.location.href='?page=login'">Login</button>
+      <button onclick="window.location.href='?page=signup'">Get Started</button>
+    </div>
+  </section>
+</body>
+</html>
